@@ -1,6 +1,6 @@
 name: RandomTPCC
 main: net.clownercraft.randomtpCC.RandomTPCC
-version: 1.3.0
+version: 1.3.2
 api-version: 1.16
 commands:
   randomtp:

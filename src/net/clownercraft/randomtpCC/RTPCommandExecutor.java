@@ -6,9 +6,6 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import org.bukkit.scheduler.BukkitRunnable;
-
-import java.util.concurrent.ThreadLocalRandom;
 
 public class RTPCommandExecutor implements CommandExecutor {
 
@@ -80,7 +77,7 @@ public class RTPCommandExecutor implements CommandExecutor {
 
     private boolean isSafe(Location loc) {
         Block block = loc.getBlock();
-        if (loc.getY() < 1) return false;
+        if (loc.getY() < -63) return false;
         if (block.getType().equals(Material.LAVA)) return false;
         if (block.getType().equals(Material.WATER)) return false;
         if (block.getType().equals(Material.FIRE)) return false;
@@ -120,8 +117,6 @@ public class RTPCommandExecutor implements CommandExecutor {
         while (!safe && count < 20) {
             double rand1 = (Math.random() * radius * 2) - radius;
             double rand2 = (Math.random() * radius * 2) - radius;
-            //int rand1 = ThreadLocalRandom.current().nextInt(-1 * radius, radius);
-            //int rand2 = ThreadLocalRandom.current().nextInt(-1 * radius, radius);
 
             double resultX = centerX + 32 * rand1;
             double resultZ = centerZ + 32 * rand2;
