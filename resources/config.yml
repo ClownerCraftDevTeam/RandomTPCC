@@ -1,0 +1,23 @@
+defaultWorld: Survival2018
+
+Worlds:
+  Survival2018:
+    alias: "survival"
+    center:
+      x: 0
+      z: 0
+    radius: 5000
+
+  Survival2018Custom:
+    alias: "custom"
+    center:
+      x: 0
+      z: 0
+    radius: 5000
+
+  Explore:
+    alias: "explore"
+    center:
+      x: 0
+      z: 0
+    radius: 2000
